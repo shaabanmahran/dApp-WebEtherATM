@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Requester Dashboard</title>
+
+	<link rel="stylesheet" type="text/css" href="mystyle.css">
+	<script type="text/javascript" src="./scripts/js-scripts.js"></script>
+	<script type="text/javascript" src="./scripts/js-scripts_requester.js"></script>
+	<script type="text/javascript" src="./node_modules/web3/dist/web3.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	
+</head>
+
+<body onload="displayAccountInfo()" >
+<!-- <body> -->
+	<div align="center">
+		<h3>Welcome to CommunityATM!</h3>
+	</div>
+	
+	<!-- Ether image -->
+	<div align="center">
+		<img src="./imgs/blue.JPG">
+	</div>
+
+	<!-- list all the ethereum accounts and balance -->
+	<fieldset>
+		<div align="center">
+			<h4 align="center">Account </h4>
+			<h5 id="account"></h5>
+
+			<h4 align="center">Balance </h4>
+			<h5> <label style="background-color: #FFFF00" id="balance"></label></h5>
+		</div>
+	</fieldset> 
+
+	<!-- making cash request -->
+	<fieldset>
+		<form id="request_form">
+		<br>
+			<label>Choose a Smart Contract: </label>
+			<input type="radio" name="smartcontract" value="firstoffer" id="firstoffer" checked onclick="enable_disable1();"> First offer wins
+			<input type="radio" name="smartcontract" value="bestoffer" id="bestoffer" onclick="enable_disable2();"> Best price wins<br><br>
+			
+			<div align="center">
+				<label>Your Name </label>
+				<input type="text" name="name" id="user" placeholder="user name">
+			</div>
+			<br>
+
+			<div align="center">
+				<label>USD </label>
+				<input class="form-control" type="text" name="name" id="usd" placeholder="USD" onkeydown="usdToEtherConverter()">
+				<!-- <label class="error fade">You don't have enough balance!</label> -->
+				<label>= ETH </label>
+				<input type="text" name="name" id="eth" placeholder="ETH">
+			</div>
+			<br>
+
+			<div align="center">
+				<input type="button" name="name" id="request" value="Send Cash Request" onclick="createRequest()">	
+			</div>
+		</form>
+
+		<div align="center">
+			<h5 id="reqs"></h5>
+		</div>	
+	</fieldset>
+
+	<!-- Request accepted message -->
+	<fieldset>
+		<div align="center">
+			<h4 id="accepter_info" style="color:blue;"></h4>
+		</div>
+		
+	</fieldset>
+
+		<!-- list all the ethereum accounts and balance -->
+	<fieldset>
+		<div align="center">
+			<label>Pay To </label>
+			<input type="text" name="payment" id="pay_to" disabled>
+			<label>ETH </label>
+			<input type="text" name="payment" id="eth_amount" disabled>
+			<input type="button" name="button" id="payment" value="Pay" onclick="sendPayment()">
+		</div>
+		<h5 id="response"></h5>
+	</fieldset>	
+	
+	<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script> -->
+	<script type="text/javascript">
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Giver Dashboard</title>
+
+	<link rel="stylesheet" type="text/css" href="mystyle.css">
+	<script type="text/javascript" src="./scripts/js-scripts.js"></script>
+	<script type="text/javascript" src="./scripts/js-scripts_giver.js"></script>
+	<script type="text/javascript" src="./node_modules/web3/dist/web3.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+</head>
+<body onload="displayAccountInfo()">
+	<div align="center">
+		<h3>Welcome to CommunityATM!</h3>
+	</div>
+
+	<!-- Ether image -->
+	<div align="center">
+		<img src="./imgs/blue.JPG">
+	</div>
+
+	<!-- list all the ethereum accounts and balance -->
+	<fieldset>
+		<div align="center">
+			<h4>Account </h4>
+			<h5 id="account"></h5>
+
+			<h4>Balance </h4>
+			<h5> <label style="background-color: #FFFF00" id="balance"></label></h5>
+		</div>
+		
+	</fieldset> 
+
+	<!-- Display all active requesters in a list or table-->
+	<!-- Requester's Name       CashAmount       EtherAmount -->
+	<fieldset>
+		<div align="center">
+			<h4 align="center">Cash Requests </h4>
+			<h5 id="new_req_info" style="color:green;"></h5>
+		</div>
+
+		<div align="center">
+			<input type="button" name="name" id="accept" value="Accept offer" onclick="acceptRequest()">	
+		</div>	
+
+		<div align="center">
+			<h5 id="win_msg" style="color:red;"></h5>
+		</div>
+	</fieldset>
+	
+
+	<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script> -->
+	<script type="text/javascript">
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+body {
+	/*background-color: #F0F0F0;*/
+	padding: 0em;
+	font-family: 'Raleway', 'Source Sans Pro', 'Arial';
+	margin-top: 0px;
+}
+
+img {
+	zoom: 15%;
+	/*display: block;*/
+}
+
+fieldset{
+	width: 80%;
+	margin: 0 auto;
+	text-align: left;
+	background-color: #F0F0F0;
+}
+
+form
+{
+    text-align: center;
+}
+.container {
+	width: 50%;
+	margin: 0 auto;
+}
+
